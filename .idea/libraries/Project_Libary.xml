@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Project Libary">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../Project Library/Project Libary" />
+      <root url="file://$MAVEN_REPOSITORY$/org/openjfx" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="file://$MAVEN_REPOSITORY$/org/openjfx" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/../Project Library/Project Libary" recursive="false" />
+  </library>
+</component>
