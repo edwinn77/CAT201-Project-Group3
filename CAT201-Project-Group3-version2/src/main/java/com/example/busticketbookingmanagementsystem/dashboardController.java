@@ -1186,7 +1186,7 @@ public class dashboardController implements Initializable {
         // Set the sorted and filtered list as the items of the TableView
         customer_tableView.setItems(sortList);
     }
-
+    
     /**
      * Handles the selection of a customer from the TableView and updates the form fields with the selected customer's data.
      */
@@ -1207,9 +1207,6 @@ public class dashboardController implements Initializable {
         customer_ID.setText(String.valueOf(cusD.getCustomerNum()));
     }
 
-    /**
-     * Deletes the selected customer from the database.
-     */
     public void customerDelete() {
         // Check if customer_ID is empty
         if (customer_ID.getText().isEmpty()) {
@@ -1487,11 +1484,6 @@ public class dashboardController implements Initializable {
             customers_Btn.setStyle("-fx-background-color: transparent");
 
             busIdList();
-//            bookingTicket_busID.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
-//                if (newSelection != null) {
-//                    locationList(newSelection.toString());
-//                }
-//            });
             departLocationList();
             arriveLocationList();
             typeList();
@@ -1514,6 +1506,44 @@ public class dashboardController implements Initializable {
             customersSearch();
 
         }
+    }
+
+    public void close(){
+        System.exit(0);
+    }
+
+    public void minimize(){
+        Stage stage = (Stage)main_form.getScene().getWindow();
+        stage.setIconified(true);
+    }
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources){
+        dashboard_form.setVisible(true);
+        availableB_form.setVisible(false);
+        bookingTicket_form.setVisible(false);
+        customer_form.setVisible(false);
+
+        defaultBtn();
+        displayUsername();
+
+        dashboardDisplayAB();
+        dashboardDisplayIT();
+        dashboardDisplayTI();
+        dashboardChart();
+
+
+        comboBoxStatus();
+        availableBShowBusData();
+
+        busIdList();
+        departLocationList();
+        arriveLocationList();
+        typeList();
+        ticketNumList();
+        genderList();
+
+        customersShowDataList();
     }
 
     public void showAlert(String title, String content) {
@@ -1561,48 +1591,6 @@ public class dashboardController implements Initializable {
         }
     }
 
-    public void close(){
-        System.exit(0);
-    }
-
-    public void minimize(){
-        Stage stage = (Stage)main_form.getScene().getWindow();
-        stage.setIconified(true);
-    }
-
-    @Override
-    public void initialize(URL location, ResourceBundle resources){
-        dashboard_form.setVisible(true);
-        availableB_form.setVisible(false);
-        bookingTicket_form.setVisible(false);
-        customer_form.setVisible(false);
-
-        defaultBtn();
-        displayUsername();
-
-        dashboardDisplayAB();
-        dashboardDisplayIT();
-        dashboardDisplayTI();
-        dashboardChart();
-
-
-        comboBoxStatus();
-        availableBShowBusData();
-
-        busIdList();
-//        bookingTicket_busID.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
-//            if (newSelection != null) {
-//                locationList(newSelection.toString());
-//            }
-//        });
-        departLocationList();
-        arriveLocationList();
-        typeList();
-        ticketNumList();
-        genderList();
-
-        customersShowDataList();
-    }
 }
 
 
