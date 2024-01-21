@@ -15,3 +15,15 @@
    
 6. Find the 'RunApplication.java' file and click the 'Run' button.
 </p>
+
+## Credited to :
+> **Group 03**
+> 
+> Edwin Chia Yi Yang 163904
+> 
+> Ong Hsien Hung 164848
+>
+> Ang Chin Zhen 164820
+> 
+> Hong JingLong 164243
+---
