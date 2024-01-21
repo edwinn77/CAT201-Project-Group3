@@ -2,6 +2,7 @@
 
 ## Guidance to run the code
 <p style="text-align: justify;">
+
 1. Download the source course from 'master' branch. Open project in Intellij IDEA.
   
 2. Run maven.
